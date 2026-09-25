@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Николай Калугин — сайты, ИИ-боты и ИИ-агенты</title>
+<meta name="description" content="Николай Калугин делает сайты, ИИ-ботов и ИИ-агентов для малого бизнеса.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --fg:#000000; --muted:#6b6b6b; --line:#000000;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#000000; --fg:#ffffff; --muted:#9a9a9a; --line:#ffffff; }
+}
+:root[data-theme="dark"]{ --bg:#000000; --fg:#ffffff; --muted:#9a9a9a; --line:#ffffff; }
+html{ scroll-padding-top:env(safe-area-inset-top,0px); }
+*,*::before,*::after{ box-sizing:border-box; }
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:"Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size:1.0625rem; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.wrap{ max-width:60rem; margin:0 auto; padding:0 1.25rem; }
+a{ color:inherit; }
+a:focus-visible, button:focus-visible{ outline:2px solid var(--fg); outline-offset:4px; }
+
+header.hero{ padding:3.5rem 0 3rem; border-bottom:2px solid var(--line); }
+.name{
+  font-weight:800; letter-spacing:-0.045em; line-height:0.88;
+  font-size:clamp(3.4rem, 17vw, 9.5rem); margin:0;
+}
+.name span{ display:block; }
+.name .last{ font-weight:300; }
+.lead{ max-width:32ch; font-size:1.25rem; margin:2rem 0 0; }
+.clients{ max-width:40ch; margin:1rem 0 0; }
+.status{ margin:1rem 0 0; color:var(--muted); font-size:0.95rem; }
+.contacts{ list-style:none; margin:2.5rem 0 0; padding:0; border-top:1px solid var(--line); }
+.contacts li{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:0.25rem 1rem; padding:1rem 0; border-bottom:1px solid var(--line); }
+.contacts span{ color:var(--muted); }
+.contacts a{ font-weight:500; text-decoration:none; word-break:break-all; }
+.contacts a:hover{ text-decoration:underline; }
+
+section{ padding:3rem 0; }
+h2{ font-size:1.5rem; font-weight:700; letter-spacing:-0.02em; margin:0 0 1.5rem; }
+
+.services{ list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.service{ border-bottom:1px solid var(--line); }
+.service button{
+  all:unset; box-sizing:border-box; width:100%; cursor:pointer;
+  display:flex; justify-content:space-between; align-items:baseline; gap:1rem;
+  padding:1.25rem 0.75rem; font-size:clamp(1.75rem, 7vw, 3rem); font-weight:700; letter-spacing:-0.03em;
+}
+.service button .sign{ font-weight:300; transition:transform .25s ease; }
+.service p{ margin:0; padding:0 0.75rem 1.5rem; max-width:42ch; display:none; }
+.service.open{ background:var(--fg); color:var(--bg); }
+.service.open p{ display:block; }
+.service.open .sign{ transform:rotate(45deg); }
+
+.steps{ list-style:none; margin:0; padding:0; display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fit,minmax(12rem,1fr)); }
+.steps li{ border-top:2px solid var(--line); padding-top:0.75rem; }
+.steps b{ display:block; font-size:1.125rem; margin-bottom:0.25rem; }
+.steps span{ color:var(--muted); font-size:0.95rem; }
+
+.contact{ border-top:2px solid var(--line); padding:3rem 0 4rem; }
+.contact p{ max-width:36ch; margin:0 0 1.5rem; }
+.cta{
+  display:inline-block; background:var(--fg); color:var(--bg); text-decoration:none;
+  font-weight:500; padding:1rem 1.5rem; border:2px solid var(--fg);
+}
+.cta:hover{ background:var(--bg); color:var(--fg); }
+footer{ color:var(--muted); font-size:0.875rem; padding-bottom:2rem; }
+
+@media (prefers-reduced-motion: reduce){ .service button .sign{ transition:none; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <h1 class="name"><span>Николай</span><span class="last">Калугин</span></h1>
+    <p class="lead">Делаю сайты, ИИ-ботов и ИИ-агентов, которые приводят клиентов и экономят время.</p>
+    <p class="clients">Работаю с малым бизнесом: салоны красоты, кофейни, эксперты, мастера, онлайн-школы и другие.</p>
+    <p class="status">Сейчас беру новые заказы</p>
+  </header>
+
+  <section aria-labelledby="services-title">
+    <h2 id="services-title">Чем могу помочь</h2>
+    <ul class="services">
+      <li class="service">
+        <button aria-expanded="false">Сайты <span class="sign" aria-hidden="true">+</span></button>
+        <p>Лендинги и сайты-визитки, которые удобно открывать с телефона и которые приводят заявки. Тексты пишу сам.</p>
+      </li>
+      <li class="service">
+        <button aria-expanded="false">ИИ-боты <span class="sign" aria-hidden="true">+</span></button>
+        <p>Telegram-боты, которые записывают клиентов, принимают заявки и отвечают на частые вопросы круглосуточно.</p>
+      </li>
+      <li class="service">
+        <button aria-expanded="false">ИИ-агенты <span class="sign" aria-hidden="true">+</span></button>
+        <p>Программы, которые сами обрабатывают заявки, готовят ответы клиентам и заносят данные в таблицы.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="process-title">
+    <h2 id="process-title">Как работаем</h2>
+    <ol class="steps">
+      <li><b>1. Обсуждаем задачу</b><span>Короткий бриф: что нужно и для кого.</span></li>
+      <li><b>2. Показываю прототип</b><span>Первая версия за пару дней.</span></li>
+      <li><b>3. Вносим правки</b><span>Дорабатываем, пока не будет как надо.</span></li>
+      <li><b>4. Запускаем</b><span>Публикую и передаю все доступы.</span></li>
+    </ol>
+  </section>
+
+  <section class="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Обсудим ваш проект</h2>
+    <p>Напишите, что хотите сделать, — отвечу в течение дня и предложу решение.</p>
+    <a class="cta" href="https://t.me/Nikolay2205c">Написать в Telegram</a>
+    <ul class="contacts">
+      <li><span>Telegram</span><a href="https://t.me/Nikolay2205c">@Nikolay2205c</a></li>
+      <li><span>Почта</span><a href="mailto:ssnkn34598@gmail.com">ssnkn34598@gmail.com</a></li>
+    </ul>
+  </section>
+
+  <footer>© 2026 Николай Калугин</footer>
+</main>
+<script>
+document.querySelectorAll('.service button').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var li = btn.parentElement;
+    var open = li.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
+</script>
+</body>
+</html>
